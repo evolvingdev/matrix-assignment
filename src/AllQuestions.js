@@ -59,18 +59,18 @@ export const AllQuestions = [
     ],
     CorrectAnswer: "c",
   },
-  {
-    Question: "7) What are the limitations of ReactJS?",
-    Options: [
-      {
-        a: "React is only for view layer of the app so we still need the help of other technologies to get a complete tooling set for development      ",
-      },
-      {
-        b: "React is using inline templating and JSX. This can seem awkward to some developers      ",
-      },
-      { c: "The library of react is too large" },
-      { d: "All of these" },
-    ],
-    CorrectAnswer: "d",
-  },
+  // {
+  //   Question: "7) What are the limitations of ReactJS?",
+  //   Options: [
+  //     {
+  //       a: "React is only for view layer of the app so we still need the help of other technologies to get a complete tooling set for development      ",
+  //     },
+  //     {
+  //       b: "React is using inline templating and JSX. This can seem awkward to some developers      ",
+  //     },
+  //     { c: "The library of react is too large" },
+  //     { d: "All of these" },
+  //   ],
+  //   CorrectAnswer: "d",
+  // },
 ];

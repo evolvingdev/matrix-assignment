@@ -1,3 +1,6 @@
 input {
   font-size: 211px;
 }
+label{
+  margin-left: 5%;
+}

@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from "react";
 import "./Options.css";
+import CustomRadioButton from "../Custom-Radio-Button/CustomRadioButton";
 const optionsStyle = {
   optionsContainer: {
     display: "flex",
@@ -15,6 +16,8 @@ const optionsStyle = {
   },
   optionInput: {
     width: "500px",
+    display: "flex",
+    alignItems: "center",
   },
   radioStyle: {
     fontSize: "121px",
@@ -48,7 +51,6 @@ function Options(props) {
       props.currentQuestion[0].Options[0] &&
       props.currentQuestion[0].Options[0].a
   );
-  const [checked, setChecked] = useState(false);
   const [isAnswerCorrect, setIsAnswerCorrect] = useState(false);
   const [showCorrectAnswer, setShowCorrectAnswer] = useState(false);
   const [correctAnswerCount, setCorrectAnswerCount] = useState(0);
@@ -76,16 +78,17 @@ function Options(props) {
     <>
       <div style={optionsStyle.optionsParent}>
         <div style={optionsStyle.optionsContainer}>
-          <div style={optionsStyle.optionInput}>
+          <div style={optionsStyle.optionInput} onClick={() => setValue("a")}>
             {" "}
-            <input
-              type="radio"
+            <CustomRadioButton />
+            {/* <input
+              type="checkbox"
               value="a"
               onClick={() => (checked ? setChecked(false) : setChecked(true))}
               onChange={(e) => setValue(e.target.value)}
               style={optionsStyle.radioStyle}
               checked={checked}
-            />
+            /> */}
             <label htmlFor="">
               {props &&
                 props.currentQuestion[0] &&
@@ -93,14 +96,15 @@ function Options(props) {
                 props.currentQuestion[0].Options[0].a}
             </label>
           </div>
-          <div style={optionsStyle.optionInput}>
+          <div style={optionsStyle.optionInput} onClick={() => setValue("b")}>
             {" "}
-            <input
+            {/* <input
               type="radio"
               value="b"
               onChange={(e) => setValue(e.target.value)}
               style={optionsStyle.radioStyle}
-            />
+            /> */}
+            <CustomRadioButton />
             <label htmlFor="">
               {props &&
                 props.currentQuestion[0] &&
@@ -108,14 +112,15 @@ function Options(props) {
                 props.currentQuestion[0].Options[1].b}
             </label>
           </div>
-          <div style={optionsStyle.optionInput}>
+          <div style={optionsStyle.optionInput} onClick={() => setValue("c")}>
             {" "}
-            <input
+            {/* <input
               type="radio"
               value="c"
               onChange={(e) => setValue(e.target.value)}
               style={optionsStyle.radioStyle}
-            />
+            /> */}
+            <CustomRadioButton />
             <label htmlFor="">
               {props &&
                 props.currentQuestion[0] &&
@@ -123,14 +128,15 @@ function Options(props) {
                 props.currentQuestion[0].Options[2].c}
             </label>
           </div>
-          <div style={optionsStyle.optionInput}>
+          <div style={optionsStyle.optionInput} onClick={() => setValue("d")}>
             {" "}
-            <input
+            {/* <input
               type="radio"
               value="d"
               onChange={(e) => setValue(e.target.value)}
               style={optionsStyle.radioStyle}
-            />
+            /> */}
+            <CustomRadioButton />
             <label htmlFor="">
               {props &&
                 props.currentQuestion[0] &&
@@ -156,7 +162,7 @@ function Options(props) {
             onClick={() => checkSol()}
             disabled={true}
           >
-            Submit Solution
+            Check Solution
           </div>
         </div>
       </div>
